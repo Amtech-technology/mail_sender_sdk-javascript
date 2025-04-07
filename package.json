@@ -1,0 +1,38 @@
+{
+  "name": "mail-sender-sdk",
+  "version": "1.0.9",
+  "description": "A simple mail sender SDK supporting Node.js and browser.",
+  "main": "index.js",
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amtech-technology/mail_sender.git"
+  },
+  "keywords": [
+    "email",
+    "sdk",
+    "node",
+    "browser",
+    "sendgrid"
+  ],
+  "author": "Amtech technology (Amtech-co LLC | Software)",
+  "license": "ATOSL (Amtech Technology Open Source License)",
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "rollup": "^2.79.2",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "dependencies": {
+    "core-js": "^3.41.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
