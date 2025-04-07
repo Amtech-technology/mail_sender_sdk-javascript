@@ -14,60 +14,64 @@ Key Features:
 **Installation**
 ------------
 1. *Install the SDK*:
-2. 
+   
 sh:
    `npm install mail-sender-sdk`
 
 Create an account to `https://www.amtech-co.com` to get a free APIKEY
 
-2. *Usage in Node.js*:
+1. *Usage in Node.js*:
 js:
  ```
- import { sendEmail } from 'mail-sender-sdk';
+import { sendEmail } from 'mail-sender-sdk';
 
-   const apiKey = 'your-sendgrid-api-key';
-   const from = 'sender@example.com';
-   const to = 'recipient@example.com';
-   const subject = 'Test Email';
-   const body = 'This is a test email body.';
-   const companyName = 'Your Company';
+const apiKey = 'your-sendgrid-api-key';
+const from = 'sender@example.com';
+const to = 'recipient@example.com';
+const emailCC = 'exemple@domain.com'; // required. set the company email adresse if don't what to put here!
+const emailBCC = 'exemple@domain.com'; // required. set the company email adresse if don't what to put here!
+const attachment = ''; // the attachment is not supported yet. leave it blank until the update
+const attachment_name = ''; // leave this blank as well
+const subject = 'Test Email';
+const body = 'This is a test email body.';
+const companyName = 'Your Company';
 
-   sendEmail(from, to, companyName, subject, body, apiKey)
-       .then(response => {
-           console.log('Email sent successfully!', response);
-       })
-       .catch(error => {
-           console.error('Error sending email:', error);
-       });
+sendEmail(from, to, emailCC, emailBCC, attachment, attachment_name, companyName, subject, body, apiKey)
+.then(response => {
+    console.log('Email sent successfully!', response);
+})
+.catch(error => {
+    console.error('Error sending email:', error);
+});
 ```
 
-3. Usage in the Browser:
+1. Usage in the Browser:
    
 html:
 `<script type="module" src='index.js'></script>`
 
 into the index.js file:
    ```
-            import { sendEmail } from './path/to/index.js';
+import { sendEmail } from './path/to/index.js';
 
-                const apiKey = 'your-sendgrid-api-key';
-                const from = 'sender@example.com';
-                const to = 'recipient@example.com';
-                const emailCC = 'exemple@domain.com'; // required. set the company email adresse if don't what to put here!
-                const emailBCC = 'exemple@domain.com'; // required. set the company email adresse if don't what to put here!
-                const attachment = ''; // the attachment is not supported yet. leave it blank until the update
-                const attachment_name = ''; // leave this blank as well
-                const subject = 'Test Email';
-                const body = 'This is a test email body.';
-                const companyName = 'Your Company';
+const apiKey = 'your-sendgrid-api-key';
+const from = 'sender@example.com';
+const to = 'recipient@example.com';
+const emailCC = 'exemple@domain.com'; // required. set the company email adresse if don't what to put here!
+const emailBCC = 'exemple@domain.com'; // required. set the company email adresse if don't what to put here!
+const attachment = ''; // the attachment is not supported yet. leave it blank until the update
+const attachment_name = ''; // leave this blank as well
+const subject = 'Test Email';
+const body = 'This is a test email body.';
+const companyName = 'Your Company';
 
-                sendEmail(from, to, emailCC, emailBCC, attachment, attachment_name, companyName, subject, body, apiKey)
-                    .then(response => {
-                        console.log('Email sent successfully!', response);
-                    })
-                    .catch(error => {
-                        console.error('Error sending email:', error);
-                    });
+sendEmail(from, to, emailCC, emailBCC, attachment, attachment_name, companyName, subject, body, apiKey)
+.then(response => {
+    console.log('Email sent successfully!', response);
+})
+.catch(error => {
+    console.error('Error sending email:', error);
+});
 ```
 
 **API Usage**
@@ -92,9 +96,9 @@ Function: `sendEmail(from, to, companyName, subject, body, apiKey)`
 - *Invalid API Key*: Ensure your API key is valid.
 
 **Responses**:
-- *Success message exemple*:
-  ![success response](./assets/image/success.PNG)
-- *Failed message exemple*:
+- *Success message exemple*:<br>
+  ![success response](./assets/image/success.PNG)<br>
+- *Failed message exemple*:<br>
   ![failed response](./assets/image/failed.PNG)
 
 
