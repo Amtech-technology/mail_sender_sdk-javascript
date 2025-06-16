@@ -1,3 +1,5 @@
+![Build Status](https://github.com/username/repo-name/actions/workflows/main.yml/badge.svg)
+
 **Amtech Mail Sender SDK Documentation**
 ======================================
 
@@ -97,9 +99,13 @@ Function: `sendEmail(from, to, companyName, subject, body, apiKey)`
 
 **Responses**:
 - *Success message exemple*:<br>
+
   ![success response](./assets/image/success.PNG)<br>
+  
 - *Failed message exemple*:<br>
+
   ![failed response](./assets/image/failed.PNG)
+  
 
 
 **FAQ**
