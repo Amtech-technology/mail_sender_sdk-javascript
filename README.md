@@ -1,5 +1,3 @@
-![Build Status](https://github.com/username/repo-name/actions/workflows/main.yml/badge.svg)
-
 **Amtech Mail Sender SDK Documentation**
 ======================================
 
